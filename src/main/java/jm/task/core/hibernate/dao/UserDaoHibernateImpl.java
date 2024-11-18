@@ -13,10 +13,10 @@ import java.util.Iterator;
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
+
     public UserDaoHibernateImpl() {
 
     }
-
 
     @Override
     public void createUsersTable() {
@@ -35,7 +35,6 @@ public class UserDaoHibernateImpl implements UserDao {
         }
     }
 
-
     @Override
     public void dropUsersTable() {
         try (Session session = Util.getSession()) {
@@ -47,7 +46,6 @@ public class UserDaoHibernateImpl implements UserDao {
             s.printStackTrace();
         }
     }
-
 
     @Override
     public void saveUser(String name, String lastName, byte age) {
@@ -113,5 +111,4 @@ public class UserDaoHibernateImpl implements UserDao {
             e.printStackTrace();
         }
     }
-
 }
